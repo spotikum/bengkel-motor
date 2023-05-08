@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "115794841094",
+    "project_id": "bengkel-motor-cea56",
+    "storage_bucket": "bengkel-motor-cea56.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:115794841094:android:eb4f6d35f9d40ee805bd87",
+        "android_client_info": {
+          "package_name": "id.bukanspot.bengkelmotor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "115794841094-ou09h1187e7fonn5p6ubrg5aqpja0ak3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "id.bukanspot.bengkelmotor",
+            "certificate_hash": "1627fa58617bc77b0c3a6c8f0fb4765fc76ffd55"
+          }
+        },
+        {
+          "client_id": "115794841094-dhj2sct8rp66aai4gf3a4i596kpfiscf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC0WH73-ffNLvUcmHYLRZcTDlY135Uq8Yk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "115794841094-dhj2sct8rp66aai4gf3a4i596kpfiscf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
