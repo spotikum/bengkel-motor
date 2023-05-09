@@ -14,6 +14,8 @@ class LoginActivity : AppCompatActivity() {
     lateinit var auth : FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        supportActionBar?.hide()
+
         binding = ActivityLoginBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
