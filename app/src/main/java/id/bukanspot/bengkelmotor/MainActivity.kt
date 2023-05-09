@@ -1,11 +1,29 @@
 package id.bukanspot.bengkelmotor
 
-import android.support.v7.app.AppCompatActivity
-import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
+import id.bukanspot.bengkelmotor.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-    }
+
+    lateinit var binding : ActivityMainBinding
+
+//    override fun onCreate(savedInstanceState: Bundle?) {
+//        super.onCreate(savedInstanceState)
+//        binding = ActivityMainBinding.inflate(layoutInflater)
+//        setContentView(binding.root)
+//
+//        setupTab()
+//    }
+//
+//    private fun setupTab() {
+//        val adapter = ViewPagerAdapter(supportFragmentManager)
+//        adapter.addFragment(HomeFragment(),"Home")
+//        adapter.addFragment(UserFragment(),"Profile")
+//
+//        binding.viewPager.adapter = adapter
+//        binding.tabs.setupWithViewPager(binding.viewPager)
+//
+//        binding.tabs.getTabAt(0)!!.setIcon(R.drawable.ic_home)
+//        binding.tabs.getTabAt(1)!!.setIcon(R.drawable.ic_user)
+//    }
 }
