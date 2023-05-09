@@ -49,21 +49,11 @@ class UserFragment : Fragment() {
 
         auth = FirebaseAuth.getInstance()
         val user = auth.currentUser
-//
-//        //kondisi user sedang login atau tidak
-//        if (user != null){
-//            binding.edtName.setText(user.displayName)
-//            binding.edtEmail.setText(user.email)
-//
-//            //kondisi email sudah verifikasi atau belum
-//            if (user.isEmailVerified){
-//                binding.iconVerify.visibility = View.VISIBLE
-//                binding.iconNotVerify.visibility = View.GONE
-//            } else {
-//                binding.iconVerify.visibility = View.GONE
-//                binding.iconNotVerify.visibility = View.VISIBLE
-//            }
-//        }
+
+        //kondisi user sedang login atau tidak
+        if (user != null){
+            binding.edtEmail.setText(user.email)
+        }
 //
 //        //ke kamera buat ambil gambar
 //        binding.cviUser.setOnClickListener {
