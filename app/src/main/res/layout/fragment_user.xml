@@ -13,6 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:background="@color/white"
+        app:cardBackgroundColor="#d9d9d9"
         app:cardCornerRadius="20dp">
 
         <LinearLayout
@@ -21,96 +22,47 @@
             android:orientation="vertical"
             android:padding="30dp">
 
-<!--            <de.hdodenhof.circleimageview.CircleImageView-->
-<!--                android:id="@+id/cvi_user"-->
-<!--                android:layout_width="100dp"-->
-<!--                android:layout_height="100dp"-->
-<!--                android:layout_gravity="center"-->
-<!--                android:background="@drawable/ic_account_circle" />-->
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:backgroundTint="@color/black"
-                android:text="Profile"
-                android:textAlignment="center"
-                android:textColor="@color/teal_700"
-                android:textSize="24sp"
-                android:textStyle="bold" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:gravity="center"
-                android:orientation="horizontal">
-
                 <TextView
-                    android:id="@+id/edt_email"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Email@mail.com"
-                    android:layout_marginBottom="7dp"
-                    android:textSize="18dp" />
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:backgroundTint="@color/black"
+                    android:text="Profile"
+                    android:textAlignment="center"
+                    android:textColor="@color/teal_700"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="12sp"/>
 
-<!--                <RelativeLayout-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_marginLeft="3dp">-->
-
-<!--                    <ImageView-->
-<!--                        android:id="@+id/icon_notVerify"-->
-<!--                        android:layout_width="wrap_content"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:background="@drawable/ic_not_verified" />-->
-
-<!--                    <ImageView-->
-<!--                        android:id="@+id/icon_verify"-->
-<!--                        android:layout_width="wrap_content"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:background="@drawable/ic_verified" />-->
-
-<!--                </RelativeLayout>-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
 
             </LinearLayout>
 
-<!--            <EditText-->
-<!--                android:id="@+id/edt_name"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:hint="Name"-->
-<!--                android:inputType="numberPassword" />-->
+            <EditText
+                android:id="@+id/edt_name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/calibri"
+                android:hint="Name"
+                android:inputType="text"
+                android:maxLines="1"
+                android:textColor="@android:color/black"/>
 
-<!--            <Button-->
-<!--                android:id="@+id/btn_verify"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_marginTop="20dp"-->
-<!--                android:backgroundTint="@color/teal_700"-->
-<!--                android:text="Email Verification" />-->
-
-<!--            <Button-->
-<!--                android:id="@+id/btn_changePass"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:backgroundTint="#FFC107"-->
-<!--                android:text="Change Password" />-->
-
-<!--            <Button-->
-<!--                android:id="@+id/btn_changeEmail"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:backgroundTint="#00BCD4"-->
-<!--                android:text="Change Email" />-->
-
-<!--            <Button-->
-<!--                android:id="@+id/btn_scanQR"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:backgroundTint="#FF5722"-->
-<!--                android:text="Scan QR Code" />-->
+            <EditText
+                android:id="@+id/edt_email"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/calibri"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:textColor="@android:color/black"/>
 
             <Button
                 android:id="@+id/btnLogout"
@@ -123,159 +75,5 @@
 
 
     </androidx.cardview.widget.CardView>
-
-<!--&lt;!&ndash;    //card view current password&ndash;&gt;-->
-<!--    <androidx.cardview.widget.CardView-->
-<!--        android:id="@+id/cv_currentPass"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_centerInParent="true"-->
-<!--        android:layout_margin="20dp"-->
-<!--        android:visibility="gone"-->
-<!--        app:cardCornerRadius="20dp"-->
-<!--        app:cardElevation="7dp">-->
-
-<!--        <LinearLayout-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="match_parent"-->
-<!--            android:orientation="vertical"-->
-<!--            android:padding="20dp">-->
-
-<!--            <TextView-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:text="Current Password"-->
-<!--                android:textAlignment="center"-->
-<!--                android:textColor="@color/teal_700"-->
-<!--                android:textSize="20sp"-->
-<!--                android:textStyle="bold" />-->
-
-<!--            <com.google.android.material.textfield.TextInputLayout-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_marginVertical="10dp"-->
-<!--                app:passwordToggleEnabled="true">-->
-
-<!--                <EditText-->
-<!--                    android:id="@+id/edt_currentPassword"-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:hint="Current Password"-->
-<!--                    android:inputType="textPassword"-->
-<!--                    app:passwordToggleEnabled="true" />-->
-
-<!--            </com.google.android.material.textfield.TextInputLayout>-->
-
-<!--            <LinearLayout-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:orientation="horizontal">-->
-
-<!--                <Button-->
-<!--                    android:id="@+id/btn_cancel"-->
-<!--                    android:layout_width="10dp"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_marginHorizontal="5dp"-->
-<!--                    android:layout_weight="2"-->
-<!--                    android:backgroundTint="@color/black"-->
-<!--                    android:text="Cancel" />-->
-
-<!--                <Button-->
-<!--                    android:id="@+id/btn_confirm"-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_gravity="center"-->
-<!--                    android:layout_weight="1"-->
-<!--                    android:backgroundTint="@color/teal_700"-->
-<!--                    android:text="Confirm" />-->
-
-<!--            </LinearLayout>-->
-
-<!--        </LinearLayout>-->
-
-<!--    </androidx.cardview.widget.CardView>-->
-
-<!--    //card view update password-->
-<!--    <androidx.cardview.widget.CardView-->
-<!--        android:id="@+id/cv_updatePass"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_centerInParent="true"-->
-<!--        android:layout_margin="10dp"-->
-<!--        android:visibility="gone"-->
-<!--        app:cardCornerRadius="20dp"-->
-<!--        app:cardElevation="7dp">-->
-
-<!--        <LinearLayout-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="match_parent"-->
-<!--            android:orientation="vertical"-->
-<!--            android:padding="20dp">-->
-
-<!--            <TextView-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:text="New Password"-->
-<!--                android:textAlignment="center"-->
-<!--                android:textColor="@color/teal_700"-->
-<!--                android:textSize="20sp"-->
-<!--                android:textStyle="bold" />-->
-
-<!--            <com.google.android.material.textfield.TextInputLayout-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_marginTop="10dp"-->
-<!--                app:passwordToggleEnabled="true">-->
-
-<!--                <EditText-->
-<!--                    android:id="@+id/edt_newPass"-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:hint="New Password"-->
-<!--                    android:inputType="textPassword" />-->
-<!--            </com.google.android.material.textfield.TextInputLayout>-->
-
-<!--            <com.google.android.material.textfield.TextInputLayout-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_marginVertical="10dp"-->
-<!--                app:passwordToggleEnabled="true">-->
-
-<!--                <EditText-->
-<!--                    android:id="@+id/edt_confirmPass"-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:hint="Confirm Password"-->
-<!--                    android:inputType="textPassword" />-->
-<!--            </com.google.android.material.textfield.TextInputLayout>-->
-
-<!--            <LinearLayout-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:orientation="horizontal">-->
-
-<!--                <Button-->
-<!--                    android:id="@+id/btn_newCancel"-->
-<!--                    android:layout_width="10dp"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_marginHorizontal="5dp"-->
-<!--                    android:layout_weight="2"-->
-<!--                    android:backgroundTint="@color/black"-->
-<!--                    android:text="Cancel" />-->
-
-<!--                <Button-->
-<!--                    android:id="@+id/btn_newChange"-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_gravity="center"-->
-<!--                    android:layout_weight="1"-->
-<!--                    android:backgroundTint="@color/teal_700"-->
-<!--                    android:text="Change" />-->
-
-<!--            </LinearLayout>-->
-
-<!--        </LinearLayout>-->
-
-<!--    </androidx.cardview.widget.CardView>-->
 
 </RelativeLayout>
