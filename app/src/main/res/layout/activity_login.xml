@@ -38,9 +38,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/gotham"
-                android:text="Good "
+                android:text="Account "
                 android:textColor="#ffffff"
-                android:textSize="32sp" />
+                android:textSize="26sp" />
 
         </LinearLayout>
 
@@ -54,9 +54,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/gotham"
-                android:text="Morning"
+                android:text="Login"
                 android:textColor="#ffffff"
-                android:textSize="32sp" />
+                android:textSize="26sp" />
 
             <View
                 android:layout_width="match_parent"
@@ -77,7 +77,7 @@
         android:layout_marginTop="4dp"
         android:fontFamily="@font/calibri"
         android:gravity="center"
-        android:text="We pursue a relaxed gaming experience"
+        android:text="Please enter your details to log in"
         android:textColor="#9affffff"
         android:textSize="10sp"
         tools:ignore="SmallSp" />
