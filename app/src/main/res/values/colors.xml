@@ -12,7 +12,5 @@
     <color name="colorPrimaryDark">#0b132b</color>
     <color name="colorAccent">#6fffe9</color>
 
-<!--    <color name="base_color">#3DC9DC</color>-->
-    <color name="base_color">#3a506b</color>
     <color name="textInputLayout">#96ffffff</color>
 </resources>
