@@ -53,13 +53,9 @@ class UserFragment : Fragment() {
         //kondisi user sedang login atau tidak
         if (user != null){
             binding.edtEmail.setText(user.email)
+            binding.edtName.setText(user.uid)
         }
-//
-//        //ke kamera buat ambil gambar
-//        binding.cviUser.setOnClickListener {
-//            goToCamera()
-//        }
-//
+
         //button buat logout
         binding.btnLogout.setOnClickListener {
             btnLogout()
