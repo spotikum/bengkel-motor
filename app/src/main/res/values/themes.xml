@@ -2,9 +2,9 @@
     <!-- Base application theme. -->
     <style name="Theme.BengkelMotor" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">#3DC9DC</item>
-        <item name="colorPrimaryDark">#3DC9DC</item>
-        <item name="colorAccent">#3DC9DC</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
         <!-- Customize your theme here. -->
     </style>
 
@@ -16,4 +16,12 @@
     <style name="Theme.BengkelMotor.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="Theme.BengkelMotor.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="EditScreenTextInputLayoutStyle" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorControlNormal">@color/textInputLayout</item>
+        <item name="colorControlActivated">@color/textInputLayout</item>
+        <item name="colorControlHighlight">@color/textInputLayout</item>
+        <item name="colorAccent">@color/textInputLayout</item>
+        <item name="android:textColorHint">@color/textInputLayout</item>
+    </style>
 </resources>
