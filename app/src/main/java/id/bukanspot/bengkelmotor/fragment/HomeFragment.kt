@@ -1,5 +1,6 @@
 package id.bukanspot.bengkelmotor.fragment
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -9,7 +10,9 @@ import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
+import id.bukanspot.bengkelmotor.AddBookingActivity
 import id.bukanspot.bengkelmotor.R
 import id.bukanspot.bengkelmotor.databinding.ActivityBookingBinding
 import id.bukanspot.bengkelmotor.databinding.FragmentFirstBinding
@@ -35,9 +38,11 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                .setAction("Action", null).show()
+        val fab = view.findViewById<FloatingActionButton>(R.id.fab)
+        fab.setOnClickListener {
+            val intent = Intent(activity, AddBookingActivity::class.java)
+            startActivity(intent)
         }
+
     }
 }
