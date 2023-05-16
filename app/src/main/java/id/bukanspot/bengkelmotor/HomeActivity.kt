@@ -22,6 +22,7 @@ import id.bukanspot.bengkelmotor.adapter.ViewPagerAdapter
 import id.bukanspot.bengkelmotor.databinding.ActivityHomeBinding
 import id.bukanspot.bengkelmotor.databinding.ActivityMainBinding
 import id.bukanspot.bengkelmotor.databinding.NavHeaderBinding
+import id.bukanspot.bengkelmotor.fragment.HistoryFragment
 import id.bukanspot.bengkelmotor.fragment.HomeFragment
 import id.bukanspot.bengkelmotor.fragment.UserFragment
 
@@ -117,7 +118,7 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     private fun setupTab() {
         val adapter = ViewPagerAdapter(supportFragmentManager)
         adapter.addFragment(HomeFragment(),"Dashboard")
-        adapter.addFragment(UserFragment(),"History")
+        adapter.addFragment(HistoryFragment(),"History")
 
         binding.viewPager.adapter = adapter
         binding.tabs.setupWithViewPager(binding.viewPager)
