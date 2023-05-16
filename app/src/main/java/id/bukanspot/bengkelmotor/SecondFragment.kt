@@ -1,13 +1,11 @@
 package id.bukanspot.bengkelmotor
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
-import com.google.firebase.auth.FirebaseAuth
 import id.bukanspot.bengkelmotor.databinding.FragmentSecondBinding
 
 /**
@@ -16,7 +14,6 @@ import id.bukanspot.bengkelmotor.databinding.FragmentSecondBinding
 class SecondFragment : Fragment() {
 
     private var _binding: FragmentSecondBinding? = null
-    lateinit var auth : FirebaseAuth
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -36,21 +33,12 @@ class SecondFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.buttonSecond.setOnClickListener {
-            btnLogout()
-//            findNavController().navigate(R.id.action_SecondFragment_to_FirstFragment)
+            findNavController().navigate(R.id.action_SecondFragment_to_FirstFragment)
         }
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
-    }
-
-    private fun btnLogout() {
-        auth = FirebaseAuth.getInstance()
-        auth.signOut()
-        val intent = Intent(context,LoginActivity::class.java)
-        startActivity(intent)
-        activity?.finish()
     }
 }
