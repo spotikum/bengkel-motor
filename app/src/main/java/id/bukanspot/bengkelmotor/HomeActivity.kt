@@ -116,14 +116,14 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
     private fun setupTab() {
         val adapter = ViewPagerAdapter(supportFragmentManager)
-        adapter.addFragment(HomeFragment(),"History")
-        adapter.addFragment(UserFragment(),"Profile")
+        adapter.addFragment(HomeFragment(),"Dashboard")
+        adapter.addFragment(UserFragment(),"History")
 
         binding.viewPager.adapter = adapter
         binding.tabs.setupWithViewPager(binding.viewPager)
 
         binding.tabs.getTabAt(0)!!.setIcon(R.drawable.ic_home)
-        binding.tabs.getTabAt(1)!!.setIcon(R.drawable.ic_user)
+        binding.tabs.getTabAt(1)!!.setIcon(R.drawable.ic_history)
     }
 
     private fun btnLogout() {
@@ -132,63 +132,4 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         val intent = Intent(this, LoginActivity::class.java)
         startActivity(intent)
     }
-
-//    private fun btnLogout() {
-//        auth = FirebaseAuth.getInstance()
-//        auth.signOut()
-//        val intent = Intent(context,LoginActivity::class.java)
-//        startActivity(intent)
-//        activity?.finish()
-//    }
 }
-
-//    lateinit var binding : ActivityHomeBinding
-//
-//    override fun onCreate(savedInstanceState: Bundle?) {
-//        super.onCreate(savedInstanceState)
-//        binding = ActivityHomeBinding.inflate(layoutInflater)
-//        setContentView(binding.root)
-//
-//        setSupportActionBar(binding.toolbar)
-//        supportActionBar?.title = "Home"
-//
-//        setupTab()
-//    }
-//
-//    private fun setupTab() {
-//        val adapter = ViewPagerAdapter(supportFragmentManager)
-//        adapter.addFragment(HomeFragment(),"History")
-//        adapter.addFragment(UserFragment(),"Profile")
-//
-//        binding.viewPager.adapter = adapter
-//        binding.tabs.setupWithViewPager(binding.viewPager)
-//
-//        binding.tabs.getTabAt(0)!!.setIcon(R.drawable.ic_home)
-//        binding.tabs.getTabAt(1)!!.setIcon(R.drawable.ic_user)
-//    }
-//
-//    override fun onCreateOptionsMenu(menu: Menu): Boolean {
-//        menuInflater.inflate(R.menu.toolbar_menu, menu)
-//
-//        // Get the notification icon view
-////        val notification = menu.findItem(R.id.notification)
-////        val icon = notification.icon
-//
-////        // Set the badge count
-////        BadgeUtils.setBadgeCount(this, notification, icon, 2)
-//
-//        return true
-//    }
-//
-//    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-//        when(item.itemId){
-//            R.id.notification -> {
-//                val intent = Intent(this, NotificationActivity::class.java)
-//                startActivity(intent)
-//                true
-//            }
-//            else -> super.onOptionsItemSelected(item)
-//        }
-//        return true
-//    }
-//}
