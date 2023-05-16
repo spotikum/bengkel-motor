@@ -23,14 +23,14 @@ class HomeActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         setSupportActionBar(binding.toolbar)
-        supportActionBar?.title = "Dashboard"
+        supportActionBar?.title = "Home"
 
         setupTab()
     }
 
     private fun setupTab() {
         val adapter = ViewPagerAdapter(supportFragmentManager)
-        adapter.addFragment(HomeFragment(),"Home")
+        adapter.addFragment(HomeFragment(),"History")
         adapter.addFragment(UserFragment(),"Profile")
 
         binding.viewPager.adapter = adapter
