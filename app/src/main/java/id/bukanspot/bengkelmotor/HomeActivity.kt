@@ -17,14 +17,17 @@ import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import com.google.android.material.badge.BadgeUtils
 import com.google.android.material.navigation.NavigationView
+import com.google.firebase.auth.FirebaseAuth
 import id.bukanspot.bengkelmotor.adapter.ViewPagerAdapter
 import id.bukanspot.bengkelmotor.databinding.ActivityHomeBinding
 import id.bukanspot.bengkelmotor.databinding.ActivityMainBinding
+import id.bukanspot.bengkelmotor.databinding.NavHeaderBinding
 import id.bukanspot.bengkelmotor.fragment.HomeFragment
 import id.bukanspot.bengkelmotor.fragment.UserFragment
 
 class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
     lateinit var binding : ActivityHomeBinding
+    lateinit var auth : FirebaseAuth
 
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -48,6 +51,19 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         navView.setNavigationItemSelectedListener(this)
 
         setupTab()
+
+        lateinit var binding: NavHeaderBinding
+
+        val headerView = navView.getHeaderView(0)
+        binding = NavHeaderBinding.bind(headerView)
+
+        auth = FirebaseAuth.getInstance()
+        val user = auth.currentUser
+
+        //kondisi user sedang login atau tidak
+        if (user != null){
+            binding.email.text = user.email
+        }
     }
 
     override fun onBackPressed() {
@@ -80,16 +96,17 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
-        var fragment: Fragment = when (item.itemId) {
-            R.id.nav_fragment_1 -> FirstFragment()
-            R.id.nav_fragment_2 -> FirstFragment()
+        var fragment: Any = when (item.itemId) {
+            R.id.nav_fragment_1 -> {
+                btnLogout()
+            }
             else -> FirstFragment()
         }
 
         var fragmentManager = supportFragmentManager
         fragmentManager
             .beginTransaction()
-            .replace(R.id.viewPager, fragment)
+//            .replace(R.id.viewPager, fragment as Fragment)
             .commit()
         item.isChecked = true
         item.title
@@ -108,6 +125,21 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         binding.tabs.getTabAt(0)!!.setIcon(R.drawable.ic_home)
         binding.tabs.getTabAt(1)!!.setIcon(R.drawable.ic_user)
     }
+
+    private fun btnLogout() {
+        auth = FirebaseAuth.getInstance()
+        auth.signOut()
+        val intent = Intent(this, LoginActivity::class.java)
+        startActivity(intent)
+    }
+
+//    private fun btnLogout() {
+//        auth = FirebaseAuth.getInstance()
+//        auth.signOut()
+//        val intent = Intent(context,LoginActivity::class.java)
+//        startActivity(intent)
+//        activity?.finish()
+//    }
 }
 
 //    lateinit var binding : ActivityHomeBinding
