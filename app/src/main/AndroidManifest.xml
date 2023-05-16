@@ -12,6 +12,11 @@
         android:theme="@style/Theme.BengkelMotor"
         tools:targetApi="31">
         <activity
+            android:name=".BookingActivity"
+            android:exported="false"
+            android:label="@string/title_activity_booking"
+            android:theme="@style/Theme.BengkelMotor.NoActionBar" />
+        <activity
             android:name=".HomeActivity"
             android:exported="false"
             android:label="@string/title_activity_home"
