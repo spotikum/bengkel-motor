@@ -1,5 +1,6 @@
 package id.bukanspot.bengkelmotor
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
@@ -59,7 +60,12 @@ class HomeActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when(item.itemId){
-            R.id.notification -> Toast.makeText(this, "Notification", Toast.LENGTH_LONG).show()
+            R.id.notification -> {
+                val intent = Intent(this, NotificationActivity::class.java)
+                startActivity(intent)
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
         }
         return true
     }
