@@ -1,4 +1,4 @@
-package id.bukanspot.bengkelmotor
+package id.bukanspot.bengkelmotor.fragment
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
+import id.bukanspot.bengkelmotor.R
 import id.bukanspot.bengkelmotor.databinding.FragmentFirstBinding
 
 /**
