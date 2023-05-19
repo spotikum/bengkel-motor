@@ -7,6 +7,8 @@
     android:padding="16dp"
     tools:context=".AddBookingActivity">
 
+
+
 <!--    <EditText-->
 <!--        android:id="@+id/etEmpName"-->
 <!--        android:layout_width="0dp"-->
@@ -52,4 +54,13 @@
 <!--        app:layout_constraintEnd_toEndOf="parent"-->
 <!--        app:layout_constraintStart_toStartOf="parent"-->
 <!--        app:layout_constraintTop_toBottomOf="@+id/etEmpSalary" />-->
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="belum di config hehe"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
